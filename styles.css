@@ -1,0 +1,128 @@
+/* CATCHY INN LLC — draft stylesheet. Minimal, no frameworks, no tracking. */
+:root {
+  --ink: #1a1a1a;
+  --muted: #5a5a5a;
+  --accent: #1f5fa8;
+  --bg: #ffffff;
+  --wash: #f4f6f8;
+  --line: #e2e6ea;
+  --maxw: 44rem;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  color: var(--ink);
+  background: var(--bg);
+  line-height: 1.6;
+}
+
+header {
+  border-bottom: 1px solid var(--line);
+  background: var(--bg);
+}
+
+nav {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 0.9rem 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.brand {
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: var(--ink);
+  text-decoration: none;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 1.25rem;
+}
+
+nav a { color: var(--muted); text-decoration: none; }
+nav a:hover, nav a[aria-current="page"] { color: var(--accent); }
+
+main {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 2rem 1.25rem 3rem;
+}
+
+.hero {
+  padding: 2.5rem 0 1.5rem;
+}
+
+.hero h1 {
+  font-size: 2rem;
+  line-height: 1.25;
+  margin: 0 0 0.75rem;
+}
+
+h1 { font-size: 1.75rem; margin-top: 0; }
+h2 { font-size: 1.25rem; margin-top: 2rem; }
+
+.lede { font-size: 1.1rem; color: var(--muted); }
+
+.cards {
+  list-style: none;
+  margin: 1.5rem 0 0;
+  padding: 0;
+  display: grid;
+  gap: 1rem;
+}
+
+.cards li {
+  border: 1px solid var(--line);
+  border-radius: 0.5rem;
+  padding: 1.25rem;
+  background: var(--wash);
+}
+
+.cards h3 { margin: 0 0 0.5rem; font-size: 1.05rem; }
+.cards p { margin: 0; color: var(--muted); }
+
+.facts { list-style: none; padding: 0; }
+.facts li { padding: 0.35rem 0; border-bottom: 1px solid var(--line); }
+
+.note {
+  margin-top: 2.5rem;
+  padding: 1.25rem;
+  border-left: 4px solid var(--accent);
+  background: var(--wash);
+}
+
+.notice {
+  border: 1px solid var(--line);
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  background: var(--wash);
+}
+
+footer {
+  border-top: 1px solid var(--line);
+  padding: 1.5rem 1.25rem 2.5rem;
+  text-align: center;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+footer p { margin: 0.25rem 0; }
+.fineprint { font-size: 0.8rem; }
+
+a { color: var(--accent); }
+
+@media (max-width: 36rem) {
+  .hero h1 { font-size: 1.6rem; }
+  nav { flex-direction: column; align-items: flex-start; }
+}
